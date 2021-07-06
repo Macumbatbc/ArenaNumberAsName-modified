@@ -4,6 +4,8 @@ This version just replace arena: 1(2-3-4-5) to class player (e.g. Mage) on targe
 
 If you want the Class player only on target frame take this version : https://github.com/Macumbatbc/ArenaNumberAsName-modified
 
+All the credit go to snapx for this version !
+
 Original version
 https://www.curseforge.com/wow/addons/arenanumberasname
 
