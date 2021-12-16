@@ -27,7 +27,7 @@ end)
 hooksecurefunc("CompactUnitFrame_UpdateName",function(frame)
 	local unit = frame.unit
 	
-	if not select(1, IsActiveBattlefieldArena()) then
+	if not select(1, IsActiveBattlefieldArena()) and not frame:IsForbidden() then
 		frame.name:SetFont("Fonts\\FRIZQT__.TTF", 12)
 	end
 
