@@ -1,10 +1,9 @@
-## Interface: 20501
+## Interface: 20503
 ## Title: ArenaNumberAsName
-## Author: Swagkhalifa (Mograine EU)
+## Author: Swagkhalifa (Mograine EU), modified by Macumba
 ## Notes: Changes enemy players name to arena number instead
 ## Version: 1.0
 
-## LoadOnDemand: 1
-## LoadWith: Blizzard_ArenaUI
+
 
 ArenaNumberAsName.lua
