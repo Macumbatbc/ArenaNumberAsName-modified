@@ -2,19 +2,21 @@ local CF = CreateFrame("Frame")
 CF:RegisterEvent("ADDON_LOADED")
 
 local U=UnitIsUnit
-
+local select = select
+local strstr = string.find
 local function NameToArenaNumber(frame, unit)
 	if select(1, IsActiveBattlefieldArena()) and UnitIsEnemy("player", unit) and UnitPlayerControlled(unit) then
 		for i=1,5 do 
 			if U(unit, "arena"..i) then
 				local unitClass = UnitClass(unit)
-				if string.find(frame.unit, "nameplate") then
+				if strstr(frame.unit, "nameplate") then
 					frame.name:SetText(unitClass)
 					frame.name:SetFont("Fonts\\FRIZQT__.TTF", 10, "OUTLINE")
 					frame.name:SetTextColor(0,1,1)
 				else
 					frame.name:SetText(unitClass)
 				end
+				break
 			end
 		end
 	end
@@ -26,7 +28,7 @@ CF:SetScript("OnEvent", function(self, event, ...)
 		hooksecurefunc("CompactUnitFrame_UpdateName",function(frame)
 			local unit = frame.unit
 	
-			if not select(1, IsActiveBattlefieldArena()) and string.find(frame.unit, "nameplate") and not frame:IsForbidden() then
+			if not select(1, IsActiveBattlefieldArena()) and strstr(frame.unit, "nameplate") and not frame:IsForbidden() then
 				frame.name:SetFont("Fonts\\FRIZQT__.TTF", 12)
 			end
 
